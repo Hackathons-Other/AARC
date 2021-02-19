@@ -1,0 +1,144 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Font/Typpori_Search.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Theme/main_theme.tres" type="Theme" id=2]
+[ext_resource path="res://Font/Typori_Paragraph.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Scene/Home/Topic.tscn" type="PackedScene" id=4]
+[ext_resource path="res://pallete.png" type="Texture" id=5]
+[ext_resource path="res://Scene/BodyMargin.gd" type="Script" id=6]
+
+[node name="Home" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body" type="VBoxContainer" parent="."]
+margin_right = 720.0
+margin_bottom = 960.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SearchBar" type="HBoxContainer" parent="Body"]
+self_modulate = Color( 0.0666667, 0.541176, 0.698039, 1 )
+margin_right = 720.0
+margin_bottom = 58.0
+rect_clip_content = true
+
+[node name="TextEdit" type="LineEdit" parent="Body/SearchBar"]
+self_modulate = Color( 0.0666667, 0.541176, 0.698039, 1 )
+margin_right = 642.0
+margin_bottom = 58.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "GME YEETed or Beated?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Search" type="Button" parent="Body/SearchBar"]
+margin_left = 646.0
+margin_right = 720.0
+margin_bottom = 58.0
+size_flags_horizontal = 0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.027451, 0.231373, 0.298039, 1 )
+text = "Search!"
+
+[node name="Peoples" type="Label" parent="Body"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 184.0
+margin_right = -8.0
+margin_bottom = 123.0
+text = "Peoples"
+
+[node name="TabContainer" type="TabContainer" parent="Body"]
+margin_top = 74.0
+margin_right = 720.0
+margin_bottom = 960.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/font_color_bg = Color( 0.1, 0.1, 0.1, 1 )
+custom_colors/font_color_fg = Color( 0, 0, 0, 1 )
+
+[node name="Stonks" type="ScrollContainer" parent="Body/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 47.0
+margin_right = -8.0
+margin_bottom = -8.0
+scroll_horizontal_enabled = false
+
+[node name="Stonks" type="VBoxContainer" parent="Body/TabContainer/Stonks"]
+margin_right = 704.0
+margin_bottom = 831.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 16
+
+[node name="MarginContainer" parent="Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
+margin_top = 0.0
+margin_right = 704.0
+margin_bottom = 39.0
+
+[node name="MarginContainer2" parent="Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
+margin_top = 55.0
+margin_right = 704.0
+margin_bottom = 94.0
+
+[node name="MarginContainer3" parent="Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
+margin_top = 110.0
+margin_right = 704.0
+margin_bottom = 149.0
+
+[node name="MarginContainer4" parent="Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
+margin_top = 165.0
+margin_right = 704.0
+margin_bottom = 204.0
+
+[node name="MarginContainer5" parent="Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
+margin_top = 220.0
+margin_right = 704.0
+margin_bottom = 259.0
+
+[node name="MarginContainer6" parent="Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
+margin_top = 275.0
+margin_right = 704.0
+margin_bottom = 314.0
+
+[node name="MarginContainer7" parent="Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
+margin_top = 330.0
+margin_right = 704.0
+margin_bottom = 369.0
+
+[node name="Peopples" type="VBoxContainer" parent="Body/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 47.0
+margin_right = -8.0
+margin_bottom = -8.0
+
+[node name="MarginContainer3" parent="Body/TabContainer/Peopples" instance=ExtResource( 4 )]
+margin_top = 0.0
+margin_right = 672.0
+margin_bottom = 255.0
+
+[node name="pallete" type="Sprite" parent="."]
+position = Vector2( -862.07, 619.871 )
+texture = ExtResource( 5 )
