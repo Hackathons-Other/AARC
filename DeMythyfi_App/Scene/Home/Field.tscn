@@ -71,28 +71,30 @@ void fragment() {
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
 shader_param/color = Color( 1, 0, 0, 1 )
-shader_param/width = 4.0
+shader_param/width = 10.0
 shader_param/pattern = 0
-shader_param/inside = false
+shader_param/inside = true
 shader_param/add_margins = true
 
 [node name="Field" type="HBoxContainer"]
+margin_left = 10.0
 margin_top = 61.0
-margin_right = 820.0
+margin_right = 810.0
 margin_bottom = 261.0
+size_flags_horizontal = 3
 custom_constants/separation = 12
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Profile" type="VBoxContainer" parent="."]
 margin_right = 76.0
 margin_bottom = 200.0
 rect_min_size = Vector2( 64, 64 )
 custom_constants/separation = 8
 
-[node name="Label2" type="Label" parent="VBoxContainer"]
+[node name="Name" type="Label" parent="Profile"]
 margin_right = 76.0
 margin_bottom = 20.0
 custom_fonts/font = ExtResource( 2 )
@@ -102,7 +104,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="icon" type="TextureRect" parent="VBoxContainer"]
+[node name="Icon" type="TextureRect" parent="Profile"]
 material = SubResource( 2 )
 margin_top = 28.0
 margin_right = 76.0
@@ -117,14 +119,15 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label3" type="Label" parent="."]
+[node name="Quotes" type="Label" parent="."]
 margin_left = 88.0
-margin_right = 820.0
+margin_right = 800.0
 margin_bottom = 200.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
 custom_fonts/font = ExtResource( 2 )
 text = "BeSt EnvIstmEnt Ev3R LOL!!! Icon is red if predicting goes down, green otherwise"
+align = 2
 valign = 1
 autowrap = true
 __meta__ = {

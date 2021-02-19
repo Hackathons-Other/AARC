@@ -4,15 +4,16 @@ extends VBoxContainer
 onready var tween := $Tween
 export var fade_time := .2
 
-var color := [Color("ef476f"), Color("ffd166"), Color("06d6a0"), Color("118ab2")]
-var names := ["$GME", "$MOON", "$OOPS", "$LOL", "$TLDR", "$WAT", "$YOO"]
+
+var names := ["$GME", "$MOON", "$OOPS", "$LOL", "$TLDR", "$WAT", "$YOO", "$EAT", "$HAH"]
 
 func _ready():
 #	for child in get_children():
 #		if child is Topic:
 #			print(child.name)
+	randomize()
 	get_node("Toggle").text = names[randi() % names.size()]
-	get_node("Toggle").self_modulate = color[randi() % color.size()]
+	get_node("Toggle").self_modulate = Global.colors[randi() % Global.colors.size()]
 
 
 func _on_Label_button_down():

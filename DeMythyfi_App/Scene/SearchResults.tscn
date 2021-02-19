@@ -1,0 +1,223 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Font/Typori_Paragraph.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Font/Typpori_Search.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scene/Home/Field.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/BodyMargin.gd" type="Script" id=4]
+[ext_resource path="res://Theme/main_theme.tres" type="Theme" id=5]
+[ext_resource path="res://Scene/SearchResults.gd" type="Script" id=7]
+
+[node name="SearchResults" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Home" type="MarginContainer" parent="."]
+margin_right = 720.0
+margin_bottom = 960.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 5 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body" type="VBoxContainer" parent="Home"]
+margin_right = 720.0
+margin_bottom = 960.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 16
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SearchBar" type="HBoxContainer" parent="Home/Body"]
+self_modulate = Color( 0.0666667, 0.541176, 0.698039, 1 )
+margin_right = 720.0
+margin_bottom = 58.0
+rect_clip_content = true
+
+[node name="Home" type="Button" parent="Home/Body/SearchBar"]
+margin_right = 58.0
+margin_bottom = 58.0
+size_flags_horizontal = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.027451, 0.231373, 0.298039, 1 )
+text = "Home"
+
+[node name="TextEdit" type="LineEdit" parent="Home/Body/SearchBar"]
+self_modulate = Color( 0.0666667, 0.541176, 0.698039, 1 )
+margin_left = 62.0
+margin_right = 642.0
+margin_bottom = 58.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "GME YEETed or Beated?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Search" type="Button" parent="Home/Body/SearchBar"]
+margin_left = 646.0
+margin_right = 720.0
+margin_bottom = 58.0
+size_flags_horizontal = 0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.027451, 0.231373, 0.298039, 1 )
+text = "Search!"
+
+[node name="Stonks" type="ScrollContainer" parent="Home/Body"]
+margin_top = 74.0
+margin_right = 720.0
+margin_bottom = 960.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+
+[node name="Stonks" type="VBoxContainer" parent="Home/Body/Stonks"]
+margin_right = 720.0
+margin_bottom = 2307.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 16
+
+[node name="SearchTerms" type="Label" parent="Home/Body/Stonks/Stonks"]
+margin_right = 720.0
+margin_bottom = 39.0
+text = "Searched Term"
+align = 1
+
+[node name="Field" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 55.0
+margin_right = 720.0
+margin_bottom = 147.0
+
+[node name="Field2" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 163.0
+margin_right = 720.0
+margin_bottom = 255.0
+
+[node name="Field3" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 271.0
+margin_right = 720.0
+margin_bottom = 363.0
+
+[node name="Field4" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 379.0
+margin_right = 720.0
+margin_bottom = 471.0
+
+[node name="Field5" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 487.0
+margin_right = 720.0
+margin_bottom = 579.0
+
+[node name="Field6" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 595.0
+margin_right = 720.0
+margin_bottom = 687.0
+
+[node name="Field7" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 703.0
+margin_right = 720.0
+margin_bottom = 795.0
+
+[node name="Field8" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 811.0
+margin_right = 720.0
+margin_bottom = 903.0
+
+[node name="Field9" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 919.0
+margin_right = 720.0
+margin_bottom = 1011.0
+
+[node name="Field10" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 1027.0
+margin_right = 720.0
+margin_bottom = 1119.0
+
+[node name="Field11" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 1135.0
+margin_right = 720.0
+margin_bottom = 1227.0
+
+[node name="Field12" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 1243.0
+margin_right = 720.0
+margin_bottom = 1335.0
+
+[node name="Field13" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 1351.0
+margin_right = 720.0
+margin_bottom = 1443.0
+
+[node name="Field14" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 1459.0
+margin_right = 720.0
+margin_bottom = 1551.0
+
+[node name="Field15" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 1567.0
+margin_right = 720.0
+margin_bottom = 1659.0
+
+[node name="Field16" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 1675.0
+margin_right = 720.0
+margin_bottom = 1767.0
+
+[node name="Field17" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 1783.0
+margin_right = 720.0
+margin_bottom = 1875.0
+
+[node name="Field18" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 1891.0
+margin_right = 720.0
+margin_bottom = 1983.0
+
+[node name="Field19" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 1999.0
+margin_right = 720.0
+margin_bottom = 2091.0
+
+[node name="Field20" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 2107.0
+margin_right = 720.0
+margin_bottom = 2199.0
+
+[node name="Field21" parent="Home/Body/Stonks/Stonks" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 2215.0
+margin_right = 720.0
+margin_bottom = 2307.0
+[connection signal="button_up" from="Home/Body/SearchBar/Home" to="." method="_on_Home_button_up"]
+[connection signal="button_up" from="Home/Body/SearchBar/Search" to="Home" method="_on_Search_button_up"]

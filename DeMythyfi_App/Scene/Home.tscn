@@ -142,3 +142,4 @@ margin_bottom = 255.0
 [node name="pallete" type="Sprite" parent="."]
 position = Vector2( -862.07, 619.871 )
 texture = ExtResource( 5 )
+[connection signal="button_up" from="Body/SearchBar/Search" to="." method="_on_Search_button_up"]
