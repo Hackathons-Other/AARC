@@ -1,11 +1,25 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Font/Typpori_Search.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Theme/main_theme.tres" type="Theme" id=2]
 [ext_resource path="res://Font/Typori_Paragraph.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scene/Home/Topic.tscn" type="PackedScene" id=4]
-[ext_resource path="res://pallete.png" type="Texture" id=5]
+[ext_resource path="res://Scene/Anim.gd" type="Script" id=5]
 [ext_resource path="res://Scene/Home.gd" type="Script" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Fade"
+length = 0.1
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(":modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.0434416, -0.00520027, 0.0434416, 0.00520027, 1, -0.0468327, -0.0263637, 0.0468327, 0.0263637 ),
+"times": PoolRealArray( 0, 0.1 )
+}
 
 [node name="Home" type="MarginContainer"]
 anchor_right = 1.0
@@ -143,7 +157,7 @@ margin_top = 0.0
 margin_right = 672.0
 margin_bottom = 255.0
 
-[node name="pallete" type="Sprite" parent="."]
-position = Vector2( -862.07, 619.871 )
-texture = ExtResource( 5 )
+[node name="Anim" type="AnimationPlayer" parent="."]
+anims/Fade = SubResource( 1 )
+script = ExtResource( 5 )
 [connection signal="button_up" from="Body/SearchBar/Search" to="." method="_on_Search_button_up"]

@@ -3,6 +3,7 @@ extends MarginContainer
 var names := ["Noe Nayme", "Anoni Musk", "Jenair Rick", "Silli Pundts"]
 
 func _ready() -> void:
+
 	$Home/Body/SearchBar/TextEdit.text = Global.searched
 	$Home/Body/Stonks/Stonks/SearchTerms.text = Global.searched
 	for child in $Home/Body/Stonks/Stonks.get_children():

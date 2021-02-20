@@ -75,9 +75,9 @@ margin_bottom = 39.0
 size_flags_horizontal = 3
 
 [node name="Label5" type="Button" parent="Label2"]
-margin_left = 166.0
+margin_left = 164.0
 margin_top = 12.0
-margin_right = 222.0
+margin_right = 223.0
 margin_bottom = 26.0
 size_flags_horizontal = 3
 custom_styles/hover = SubResource( 1 )
@@ -86,7 +86,7 @@ custom_styles/focus = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
 custom_colors/font_color = Color( 1.35, 0.9, 1.5, 1 )
 custom_colors/font_color_hover = Color( 2.03, 1.35, 2.25, 1 )
-text = "Quote"
+text = "Source"
 
 [node name="Label3" type="CenterContainer" parent="."]
 margin_left = 560.0
