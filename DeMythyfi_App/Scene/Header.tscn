@@ -1,0 +1,112 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color( 0.8, 0.8, 0.8, 0.0784314 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=2]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color( 0.85098, 0.85098, 0.85098, 0.0784314 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color( 0.8, 0.8, 0.8, 0.0784314 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color( 0.690196, 0.690196, 0.690196, 0.0784314 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+anti_aliasing = false
+
+[node name="Header" type="HBoxContainer"]
+margin_top = 55.0
+margin_right = 680.0
+margin_bottom = 94.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="CenterContainer" parent="."]
+margin_right = 164.0
+margin_bottom = 39.0
+rect_min_size = Vector2( 164, 0 )
+size_flags_stretch_ratio = 0.4
+
+[node name="Label4" type="Button" parent="Label"]
+margin_top = 12.0
+margin_right = 164.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 164, 0 )
+size_flags_stretch_ratio = 0.4
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_colors/font_color = Color( 1.35, 0.9, 1.5, 1 )
+custom_colors/font_color_hover = Color( 2.03, 1.35, 2.25, 1 )
+text = "Confidence"
+
+[node name="Label2" type="CenterContainer" parent="."]
+margin_left = 168.0
+margin_right = 556.0
+margin_bottom = 39.0
+size_flags_horizontal = 3
+
+[node name="Label5" type="Button" parent="Label2"]
+margin_left = 166.0
+margin_top = 12.0
+margin_right = 222.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_colors/font_color = Color( 1.35, 0.9, 1.5, 1 )
+custom_colors/font_color_hover = Color( 2.03, 1.35, 2.25, 1 )
+text = "Quote"
+
+[node name="Label3" type="CenterContainer" parent="."]
+margin_left = 560.0
+margin_right = 680.0
+margin_bottom = 39.0
+rect_min_size = Vector2( 120, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Button" parent="Label3"]
+margin_top = 12.0
+margin_right = 120.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 120, 0 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_colors/font_color = Color( 1.35, 0.9, 1.5, 1 )
+custom_colors/font_color_hover = Color( 2.03, 1.35, 2.25, 1 )
+text = "Up/Down"
+align = 2

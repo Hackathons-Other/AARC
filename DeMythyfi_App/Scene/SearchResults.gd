@@ -7,7 +7,7 @@ func _ready() -> void:
 	$Home/Body/Stonks/Stonks/SearchTerms.text = Global.searched
 	for child in $Home/Body/Stonks/Stonks.get_children():
 		if child is Field:
-			child.change_quote("I don't have beeg data on " + Global.searched + " yet :(")
+			child.change_quote("I predict " + Global.searched + " will yeet up")
 			child.change_name(names[randi() % names.size()])
 			child.change_icon_color(Global.colors[randi() % Global.colors.size()])
 

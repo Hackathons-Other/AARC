@@ -1,10 +1,11 @@
 [gd_resource type="Theme" load_steps=10 format=2]
 
 [ext_resource path="res://Font/Typori_Reg.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Theme/LineEdit/new_styleboxflat.tres" type="StyleBox" id=2]
+[ext_resource path="res://Theme/LineEdit/normal.tres" type="StyleBox" id=2]
 [ext_resource path="res://Theme/LineEdit/hover.tres" type="StyleBox" id=3]
 [ext_resource path="res://Theme/LineEdit/pressed.tres" type="StyleBox" id=4]
 [ext_resource path="res://Theme/Tabs/foreground.tres" type="StyleBox" id=5]
+
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 8.0

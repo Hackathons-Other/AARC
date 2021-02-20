@@ -11,6 +11,7 @@ func _ready():
 #	for child in get_children():
 #		if child is Topic:
 #			print(child.name)
+	_on_Label_button_down()
 	randomize()
 	get_node("Toggle").text = names[randi() % names.size()]
 	get_node("Toggle").self_modulate = Global.colors[randi() % Global.colors.size()]
@@ -18,7 +19,7 @@ func _ready():
 
 func _on_Label_button_down():
 	for child in get_children():
-		if child is Field:
+		if child is Field or child.name == "Header":
 			if !child.visible:
 				child.show()
 			tween.interpolate_property(child, "modulate:a", child.modulate.a, int(round(child.modulate.a + 1)) % 2, fade_time)
@@ -28,5 +29,5 @@ func _on_Label_button_down():
 func _on_Tween_tween_completed(object, key):
 	if key == ":modulate:a":
 		for child in get_children():
-			if child is Field and child.modulate.a == 0:
+			if (child is Field or child.name == "Header") and child.modulate.a == 0:
 				child.hide()
