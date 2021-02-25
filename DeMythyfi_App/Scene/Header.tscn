@@ -54,7 +54,7 @@ margin_bottom = 39.0
 rect_min_size = Vector2( 164, 0 )
 size_flags_stretch_ratio = 0.4
 
-[node name="Label4" type="Button" parent="Label"]
+[node name="Confidence" type="Button" parent="Label"]
 margin_top = 12.0
 margin_right = 164.0
 margin_bottom = 26.0
@@ -74,7 +74,7 @@ margin_right = 556.0
 margin_bottom = 39.0
 size_flags_horizontal = 3
 
-[node name="Label5" type="Button" parent="Label2"]
+[node name="Source" type="Button" parent="Label2"]
 margin_left = 164.0
 margin_top = 12.0
 margin_right = 223.0
@@ -97,7 +97,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label6" type="Button" parent="Label3"]
+[node name="UpDown" type="Button" parent="Label3"]
 margin_top = 12.0
 margin_right = 120.0
 margin_bottom = 26.0
