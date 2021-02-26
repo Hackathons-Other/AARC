@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Img/gradient_background.png" type="Texture" id=1]
+
+[node name="gradient_background" type="Sprite"]
+visible = false
+modulate = Color( 0.027451, 0.266667, 0.4, 1 )
+texture = ExtResource( 1 )
+centered = false

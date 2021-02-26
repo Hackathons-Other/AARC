@@ -46,9 +46,13 @@ func set_dir(dir: String) -> void:
 	else:
 		Direction.flip_v = false
 
+var dist_dragged: float = 0
+var first_drag_pos: Vector2 = Vector2()
 
 func _on_Quotes_gui_input(event):
-	# enable for mobile: (event is InputEventScreenTouch or 
-	if (event is InputEventMouseButton and event.button_index == BUTTON_LEFT) and event.pressed:
-#		print(event)
-		OS.shell_open("www.google.com")
+	# TODO: enable for mobile: (event is InputEventScreenTouch or 
+	if (event is InputEventMouseButton and event.button_index == BUTTON_LEFT):
+		if !event.pressed and dist_dragged <= 3:
+			OS.shell_open("www.google.com")
+		elif event.pressed:
+			first_drag_pos = event.global_position

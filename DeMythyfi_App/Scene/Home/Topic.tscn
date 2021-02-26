@@ -10,7 +10,7 @@ margin_top = 84.0
 margin_right = 680.0
 margin_bottom = 209.0
 theme = ExtResource( 2 )
-custom_constants/separation = 16
+custom_constants/separation = 28
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -22,10 +22,13 @@ __meta__ = {
 self_modulate = Color( 0.0235294, 0.839216, 0.627451, 1 )
 margin_right = 680.0
 margin_bottom = 39.0
+mouse_default_cursor_shape = 2
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "GME"
 
 [node name="Header" parent="." instance=ExtResource( 4 )]
+margin_top = 67.0
+margin_bottom = 106.0
 
 [node name="Label" parent="Header" index="0"]
 margin_right = 189.0
@@ -55,9 +58,9 @@ margin_bottom = 39.0
 
 [node name="Field" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 110.0
+margin_top = 134.0
 margin_right = 680.0
-margin_bottom = 174.0
+margin_bottom = 198.0
 
 [node name="CenterContainer" parent="Field" index="0"]
 margin_bottom = 64.0
@@ -79,9 +82,9 @@ margin_bottom = 64.0
 
 [node name="Field2" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 190.0
+margin_top = 226.0
 margin_right = 680.0
-margin_bottom = 254.0
+margin_bottom = 290.0
 
 [node name="CenterContainer" parent="Field2" index="0"]
 margin_bottom = 64.0
