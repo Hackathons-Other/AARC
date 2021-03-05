@@ -38,7 +38,7 @@ func _on_Tween_tween_completed(object, key):
 				child.hide()
 
 
-func _on_Confidence_button_up():
+func sort_confidence():
 	var i := 0
 	if descending:
 		confidences.sort_custom(CustomSort, "sort_descending")

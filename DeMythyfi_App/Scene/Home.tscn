@@ -107,7 +107,7 @@ scroll_horizontal_enabled = false
 
 [node name="Stonks" type="VBoxContainer" parent="Home/Body/TabContainer/Stonks"]
 margin_right = 664.0
-margin_bottom = 2098.0
+margin_bottom = 2140.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 16
@@ -115,37 +115,37 @@ custom_constants/separation = 16
 [node name="MarginContainer" parent="Home/Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
 margin_top = 0.0
 margin_right = 664.0
-margin_bottom = 286.0
+margin_bottom = 292.0
 
 [node name="MarginContainer2" parent="Home/Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
-margin_top = 302.0
+margin_top = 308.0
 margin_right = 664.0
-margin_bottom = 588.0
+margin_bottom = 600.0
 
 [node name="MarginContainer3" parent="Home/Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
-margin_top = 604.0
+margin_top = 616.0
 margin_right = 664.0
-margin_bottom = 890.0
+margin_bottom = 908.0
 
 [node name="MarginContainer4" parent="Home/Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
-margin_top = 906.0
+margin_top = 924.0
 margin_right = 664.0
-margin_bottom = 1192.0
+margin_bottom = 1216.0
 
 [node name="MarginContainer5" parent="Home/Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
-margin_top = 1208.0
+margin_top = 1232.0
 margin_right = 664.0
-margin_bottom = 1494.0
+margin_bottom = 1524.0
 
 [node name="MarginContainer6" parent="Home/Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
-margin_top = 1510.0
+margin_top = 1540.0
 margin_right = 664.0
-margin_bottom = 1796.0
+margin_bottom = 1832.0
 
 [node name="MarginContainer7" parent="Home/Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
-margin_top = 1812.0
+margin_top = 1848.0
 margin_right = 664.0
-margin_bottom = 2098.0
+margin_bottom = 2140.0
 
 [node name="Peopples" type="VBoxContainer" parent="Home/Body/TabContainer"]
 visible = false

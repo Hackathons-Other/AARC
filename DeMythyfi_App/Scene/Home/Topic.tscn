@@ -33,39 +33,33 @@ margin_bottom = 102.0
 margin_left = 0.0
 margin_top = 130.0
 margin_right = 680.0
-margin_bottom = 194.0
+margin_bottom = 197.0
 
 [node name="CenterContainer" parent="Field" index="0"]
-margin_bottom = 64.0
+margin_bottom = 67.0
 
 [node name="Icon" parent="Field/CenterContainer" index="0"]
-margin_bottom = 64.0
+margin_bottom = 67.0
 
 [node name="Profile" parent="Field/CenterContainer" index="1"]
-margin_bottom = 64.0
-
-[node name="Name" parent="Field/CenterContainer/Profile" index="0"]
-margin_bottom = 19.0
-
-[node name="Percent" parent="Field/CenterContainer/Profile" index="1"]
-margin_top = 23.0
-margin_bottom = 60.0
+margin_bottom = 67.0
 
 [node name="Quotes" parent="Field" index="1"]
 margin_right = 536.0
-margin_bottom = 64.0
+margin_bottom = 67.0
 
 [node name="Direction" parent="Field" index="2"]
 margin_left = 560.0
 margin_right = 680.0
-margin_bottom = 64.0
+margin_bottom = 67.0
 
 [node name="Field2" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 222.0
+margin_top = 225.0
 margin_right = 680.0
-margin_bottom = 286.0
+margin_bottom = 292.0
 [connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]
 [connection signal="button_down" from="Toggle" to="." method="_on_Toggle_button_down"]
+[connection signal="sort_confidence" from="Header" to="." method="sort_confidence"]
 
 [editable path="Field"]

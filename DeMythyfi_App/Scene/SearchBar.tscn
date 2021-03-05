@@ -38,7 +38,7 @@ __meta__ = {
 }
 
 [node name="Margin" type="MarginContainer" parent="."]
-margin_right = 618.0
+margin_right = 603.0
 margin_bottom = 58.0
 mouse_filter = 1
 size_flags_horizontal = 3
@@ -46,7 +46,7 @@ size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="Margin"]
 material = ExtResource( 3 )
-margin_right = 618.0
+margin_right = 603.0
 margin_bottom = 58.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -55,7 +55,7 @@ texture = ExtResource( 4 )
 expand = true
 
 [node name="TextEdit" type="LineEdit" parent="Margin"]
-margin_right = 618.0
+margin_right = 603.0
 margin_bottom = 58.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 1 )
@@ -68,7 +68,7 @@ __meta__ = {
 }
 
 [node name="Search" type="Button" parent="."]
-margin_left = 622.0
+margin_left = 607.0
 margin_right = 680.0
 margin_bottom = 58.0
 mouse_default_cursor_shape = 2

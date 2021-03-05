@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scene/Header.gd" type="Script" id=1]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 8.0
@@ -44,6 +46,7 @@ anti_aliasing = false
 margin_top = 55.0
 margin_right = 680.0
 margin_bottom = 94.0
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -111,3 +114,4 @@ custom_colors/font_color = Color( 1.35, 0.9, 1.5, 1 )
 custom_colors/font_color_hover = Color( 2.03, 1.35, 2.25, 1 )
 text = "Up/Down"
 align = 2
+[connection signal="button_up" from="Label/Confidence" to="." method="_on_Confidence_button_up"]
