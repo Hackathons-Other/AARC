@@ -19,48 +19,21 @@ __meta__ = {
 [node name="Tween" type="Tween" parent="."]
 
 [node name="Toggle" type="Button" parent="."]
-self_modulate = Color( 0.0235294, 0.839216, 0.627451, 1 )
 margin_right = 680.0
-margin_bottom = 39.0
+margin_bottom = 37.0
 mouse_default_cursor_shape = 2
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "GME"
 
 [node name="Header" parent="." instance=ExtResource( 4 )]
-margin_top = 67.0
-margin_bottom = 106.0
-
-[node name="Label" parent="Header" index="0"]
-margin_right = 189.0
-
-[node name="Confidence" parent="Header/Label" index="0"]
-margin_top = 0.0
-margin_right = 189.0
-margin_bottom = 39.0
-
-[node name="Label2" parent="Header" index="1"]
-margin_left = 193.0
-margin_right = 537.0
-
-[node name="Source" parent="Header/Label2" index="0"]
-margin_left = 108.0
-margin_top = 0.0
-margin_right = 236.0
-margin_bottom = 39.0
-
-[node name="Label3" parent="Header" index="2"]
-margin_left = 541.0
-
-[node name="UpDown" parent="Header/Label3" index="0"]
-margin_top = 0.0
-margin_right = 139.0
-margin_bottom = 39.0
+margin_top = 65.0
+margin_bottom = 102.0
 
 [node name="Field" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 134.0
+margin_top = 130.0
 margin_right = 680.0
-margin_bottom = 198.0
+margin_bottom = 194.0
 
 [node name="CenterContainer" parent="Field" index="0"]
 margin_bottom = 64.0
@@ -70,6 +43,13 @@ margin_bottom = 64.0
 
 [node name="Profile" parent="Field/CenterContainer" index="1"]
 margin_bottom = 64.0
+
+[node name="Name" parent="Field/CenterContainer/Profile" index="0"]
+margin_bottom = 19.0
+
+[node name="Percent" parent="Field/CenterContainer/Profile" index="1"]
+margin_top = 23.0
+margin_bottom = 60.0
 
 [node name="Quotes" parent="Field" index="1"]
 margin_right = 536.0
@@ -82,33 +62,10 @@ margin_bottom = 64.0
 
 [node name="Field2" parent="." instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 226.0
+margin_top = 222.0
 margin_right = 680.0
-margin_bottom = 290.0
-
-[node name="CenterContainer" parent="Field2" index="0"]
-margin_bottom = 64.0
-
-[node name="Icon" parent="Field2/CenterContainer" index="0"]
-margin_bottom = 64.0
-
-[node name="Profile" parent="Field2/CenterContainer" index="1"]
-margin_bottom = 64.0
-
-[node name="Quotes" parent="Field2" index="1"]
-margin_right = 536.0
-margin_bottom = 64.0
-
-[node name="Direction" parent="Field2" index="2"]
-margin_left = 560.0
-margin_right = 680.0
-margin_bottom = 64.0
+margin_bottom = 286.0
 [connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]
 [connection signal="button_down" from="Toggle" to="." method="_on_Toggle_button_down"]
-[connection signal="button_up" from="Header/Label/Confidence" to="." method="_on_Confidence_button_up"]
-
-[editable path="Header"]
 
 [editable path="Field"]
-
-[editable path="Field2"]

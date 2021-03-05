@@ -1,7 +1,7 @@
 extends MarginContainer
 
 func _ready() -> void:
-	$Home/Body/SearchBar/TextEdit.text = Global.searched
+	$Home/Body/SearchBar/Margin/TextEdit.text = Global.searched
 	$Home/Body/Stonks/Topic/Toggle.text = Global.searched
 	for child in $Home/Body/Stonks/Topic.get_children():
 		if child is Field:

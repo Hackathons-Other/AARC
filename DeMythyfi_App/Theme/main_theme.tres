@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=10 format=2]
+[gd_resource type="Theme" load_steps=11 format=2]
 
 [ext_resource path="res://Font/Typori_Reg.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Theme/LineEdit/normal.tres" type="StyleBox" id=2]
@@ -9,14 +9,24 @@
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 8.0
 content_margin_right = 8.0
-bg_color = Color( 1, 1, 1, 1 )
-corner_radius_top_left = 16
-corner_radius_top_right = 16
-corner_radius_bottom_right = 16
-corner_radius_bottom_left = 16
+bg_color = Color( 1, 1, 1, 0.27451 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id=2]
+content_margin_left = 8.0
+content_margin_right = 8.0
+bg_color = Color( 0.690196, 0.690196, 0.690196, 0.164706 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 16
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id=3]
 content_margin_left = 8.0
 content_margin_right = 8.0
 content_margin_top = 8.0
@@ -31,18 +41,18 @@ expand_margin_left = 4.0
 expand_margin_right = 4.0
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.5, 0.5, 0.5, 1 )
-border_width_left = 4
-border_width_right = 4
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.784314, 0.784314, 0.784314, 0.784314 )
+border_width_left = 8
+border_width_right = 8
 border_color = Color( 0.8, 0.8, 0.8, 0 )
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-expand_margin_left = 4.0
-expand_margin_right = 4.0
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+expand_margin_left = 8.0
+expand_margin_right = 8.0
 anti_aliasing = false
 
-[sub_resource type="StyleBoxEmpty" id=4]
+[sub_resource type="StyleBoxEmpty" id=5]
 
 [resource]
 default_font = ExtResource( 1 )
@@ -68,9 +78,9 @@ LineEdit/constants/minimum_spaces = 12
 LineEdit/fonts/font = null
 LineEdit/icons/clear = null
 LineEdit/styles/focus = SubResource( 1 )
-LineEdit/styles/normal = ExtResource( 2 )
+LineEdit/styles/normal = SubResource( 2 )
 LineEdit/styles/read_only = null
-TabContainer/colors/font_color_bg = Color( 0.69, 0.69, 0.69, 1 )
+TabContainer/colors/font_color_bg = Color( 0.863281, 0.863281, 0.863281, 1 )
 TabContainer/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 TabContainer/colors/font_color_fg = Color( 0.94, 0.94, 0.94, 1 )
 TabContainer/constants/hseparation = 4
@@ -85,10 +95,10 @@ TabContainer/icons/increment = null
 TabContainer/icons/increment_highlight = null
 TabContainer/icons/menu = null
 TabContainer/icons/menu_highlight = null
-TabContainer/styles/panel = SubResource( 2 )
+TabContainer/styles/panel = SubResource( 3 )
 TabContainer/styles/tab_bg = ExtResource( 5 )
 TabContainer/styles/tab_disabled = ExtResource( 5 )
-TabContainer/styles/tab_fg = SubResource( 3 )
+TabContainer/styles/tab_fg = SubResource( 4 )
 VScrollBar/icons/decrement = null
 VScrollBar/icons/decrement_highlight = null
 VScrollBar/icons/increment = null
@@ -96,5 +106,5 @@ VScrollBar/icons/increment_highlight = null
 VScrollBar/styles/grabber = null
 VScrollBar/styles/grabber_highlight = null
 VScrollBar/styles/grabber_pressed = null
-VScrollBar/styles/scroll = SubResource( 4 )
+VScrollBar/styles/scroll = SubResource( 5 )
 VScrollBar/styles/scroll_focus = null
