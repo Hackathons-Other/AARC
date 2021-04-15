@@ -4,17 +4,25 @@ extends HBoxContainer
 onready var Percent := $CenterContainer/Profile/Percent
 onready var Direction := $Direction
 onready var Icon := $CenterContainer/Icon
+onready var Quotes := $Quotes
+onready var Name := $CenterContainer/Profile/Name
 
 var confidence : float
-
-#func _ready() -> void:
+var src : String = "google.com"
+func _ready() -> void:
+	set_src(CSV.get_rand_src())
+#	if src.is_valid_
 #	init_random()
 
+func set_src(s: String) -> void:
+	src = s
+	Quotes.hint_tooltip = s
+
 func set_quote(s: String) -> void:
-	$Quotes.text = s
+	Quotes.text = s
 
 func set_name(to : String) -> void:
-	$CenterContainer/Profile/Name.text = to
+	Name.text = to
 
 func set_color(color : Color) -> void:
 	Icon.modulate = color
@@ -53,7 +61,7 @@ func _on_Quotes_gui_input(event):
 	# TODO: enable for mobile: (event is InputEventScreenTouch or 
 	if (event is InputEventMouseButton and event.button_index == BUTTON_LEFT):
 		if !event.pressed and dist_dragged <= 3:
-			OS.shell_open("www.google.com")
+			OS.shell_open(src)
 		elif event.pressed:
 			first_drag_pos = event.global_position
 

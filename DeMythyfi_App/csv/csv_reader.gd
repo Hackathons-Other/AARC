@@ -7,8 +7,6 @@ func read_csv(path: String) -> Array:
 	while !file.eof_reached():
 		var more := []
 		var csv = file.get_csv_line()
-#		if csv.size()>=7 and csv[2] != groupname:
-#			groupname=csv[2]
 		for string in csv:
 			more.append(string)
 		data.append(more)
@@ -33,7 +31,14 @@ func get_rand_quote() -> String:
 	return get_quote(get_rand_row())
 
 func get_quote(row: Array) -> String:
+	return row[1]
+
+func get_rand_src() -> String:
+	return get_src(get_rand_row())
+
+func get_src(row: Array) -> String:
 	return row[8]
+
 
 func _ready():
 	DATA = read_csv("res://csv/analysts_dataset.csv")
