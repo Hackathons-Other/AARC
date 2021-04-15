@@ -107,7 +107,7 @@ scroll_horizontal_enabled = false
 
 [node name="Stonks" type="VBoxContainer" parent="Home/Body/TabContainer/Stonks"]
 margin_right = 664.0
-margin_bottom = 2140.0
+margin_bottom = 5465.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 16
@@ -115,37 +115,37 @@ custom_constants/separation = 16
 [node name="MarginContainer" parent="Home/Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
 margin_top = 0.0
 margin_right = 664.0
-margin_bottom = 292.0
+margin_bottom = 767.0
 
 [node name="MarginContainer2" parent="Home/Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
-margin_top = 308.0
+margin_top = 783.0
 margin_right = 664.0
-margin_bottom = 600.0
+margin_bottom = 1550.0
 
 [node name="MarginContainer3" parent="Home/Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
-margin_top = 616.0
+margin_top = 1566.0
 margin_right = 664.0
-margin_bottom = 908.0
+margin_bottom = 2333.0
 
 [node name="MarginContainer4" parent="Home/Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
-margin_top = 924.0
+margin_top = 2349.0
 margin_right = 664.0
-margin_bottom = 1216.0
+margin_bottom = 3116.0
 
 [node name="MarginContainer5" parent="Home/Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
-margin_top = 1232.0
+margin_top = 3132.0
 margin_right = 664.0
-margin_bottom = 1524.0
+margin_bottom = 3899.0
 
 [node name="MarginContainer6" parent="Home/Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
-margin_top = 1540.0
+margin_top = 3915.0
 margin_right = 664.0
-margin_bottom = 1832.0
+margin_bottom = 4682.0
 
 [node name="MarginContainer7" parent="Home/Body/TabContainer/Stonks/Stonks" instance=ExtResource( 4 )]
-margin_top = 1848.0
+margin_top = 4698.0
 margin_right = 664.0
-margin_bottom = 2140.0
+margin_bottom = 5465.0
 
 [node name="Peopples" type="VBoxContainer" parent="Home/Body/TabContainer"]
 visible = false
@@ -159,6 +159,6 @@ margin_bottom = -8.0
 [node name="MarginContainer3" parent="Home/Body/TabContainer/Peopples" instance=ExtResource( 4 )]
 margin_top = 0.0
 margin_right = 664.0
-margin_bottom = 290.0
+margin_bottom = 292.0
 [connection signal="timeout" from="bg/Blur/Timer" to="bg/Blur" method="_on_Timer_timeout"]
 [connection signal="searched" from="Home/Body/SearchBar" to="Home" method="_on_SearchBar_searched"]

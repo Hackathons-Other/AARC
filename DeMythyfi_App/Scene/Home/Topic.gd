@@ -2,6 +2,7 @@ class_name Topic
 extends VBoxContainer
 
 onready var tween := $Tween
+onready var Toggle := $Toggle
 export var fade_time := .2
 
 
@@ -16,15 +17,15 @@ func _ready():
 #			print(child.name)
 	randomize()
 	get_node("Toggle").text = names[randi() % names.size()]
-	get_node("Toggle").self_modulate = Global.colors[randi() % Global.colors.size()]
+	get_node("Toggle").self_modulate = G.colors[randi() % G.colors.size()]
 	for child in get_children():
 		if child is Field:
 			randomize()
 			var conf := randf() * 100
 			child.set_confidence(conf)
 			var p_name := person_names[randi() % person_names.size()]
-			child.set_name(p_name)
-			var color = Global.colors[randi() % Global.colors.size()]
+			child.set_name(CSV.get_rand_name())
+			var color = G.colors[randi() % G.colors.size()]
 			child.set_color(color)
 			confidences.append([conf, p_name, color])
 

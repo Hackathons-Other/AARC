@@ -1,0 +1,31 @@
+Calvin
+
+The stock market rises and falls, and with it, so does discussion and speculation on where the market will head. 
+
+Millennial and genZ investors, especially new and active traders, are lost in this tide of information, faced with conflicting recommendations and general inexperience in analyzing investments on their own.
+
+
+Calvin
+
+At Demythify, we believe in leveling the playing field for the everyday investor by helping them find more reliable people to trust. 
+
+Being active retail investors who face this challenge ourselves, we aim to use our passion for entrepreneurship to solve this problem.
+
+On our platform, anybody can contribute by making predictions, which we will supplement with an additional consolidated history of publicly available predictions. 
+
+We leverage natural language processing and machine learning models to analyze and quantify the reliability of individuals making predictions.
+
+As an example, if you see a headline forecasting that XYZ stock will grow by 3%, our platform will give you statistics on the reliability of the author of that prediction and help you decide if you want to trust them. 
+
+We'll demo more of the details later on.
+
+
+Calvin
+So here's a small tech demo. We haven't collected enough data to do machine learning yet, but we can show you the direction we're planning to head;
+
+Based on their past predictions, the platform will rate these individuals with a confidence score and provide a variety of metrics such as experience ratings and accuracy over time, while also considering the influence of that particular prediction topic. 
+
+
+If you click on them
+
+Demythify enables retail investors to find, follow, and engage with people they trust, so they can make investment decisions more confidently!

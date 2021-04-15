@@ -22,9 +22,9 @@ func set_color(color : Color) -> void:
 func set_confidence(conf: float) -> void:
 	confidence = conf
 	if conf < 50:
-		Percent.modulate = Global.directional_colors[Global.down]
+		Percent.modulate = G.directional_colors[G.down]
 	else:
-		Percent.modulate = Global.directional_colors[Global.up]
+		Percent.modulate = G.directional_colors[G.up]
 	Percent.text = str(round(conf)) + "%"
 
 
@@ -34,14 +34,14 @@ func init_random() -> void:
 	set_confidence(randf() * 100)
 	var coin_flip := randi() % 2
 	if coin_flip == 1:
-		set_dir(Global.up)
+		set_dir(G.up)
 	else:
-		set_dir(Global.down)
+		set_dir(G.down)
 
 func set_dir(dir: String) -> void:
-	"""Use Global.up or Global.down as dir"""
-	Direction.modulate = Global.directional_colors[dir]
-	if dir == Global.down:
+	"""Use G.up or G.down as dir"""
+	Direction.modulate = G.directional_colors[dir]
+	if dir == G.down:
 		Direction.flip_v = true
 	else:
 		Direction.flip_v = false
@@ -56,3 +56,8 @@ func _on_Quotes_gui_input(event):
 			OS.shell_open("www.google.com")
 		elif event.pressed:
 			first_drag_pos = event.global_position
+
+
+func _on_Percent_gui_input(event: InputEvent):
+	if event.is_action_pressed("click"):
+		get_tree().change_scene("res://Scene/Explanation/Explanation.tscn")

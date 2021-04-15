@@ -2,7 +2,7 @@ extends Control
 
 func _ready() -> void:
 #	modulate.a = 0
-	$Body/SearchBar/Margin/TextEdit.text = Global.searched
+	$Body/SearchBar/Margin/TextEdit.text = G.searched
 	if get_node_or_null("Anim"):
 		$Anim.play("Fade")
 	if get_node_or_null("Body/TabContainer/Stonks/Stonks"):

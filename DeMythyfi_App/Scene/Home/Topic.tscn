@@ -58,6 +58,36 @@ margin_left = 0.0
 margin_top = 225.0
 margin_right = 680.0
 margin_bottom = 292.0
+
+[node name="Field3" parent="." instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 320.0
+margin_right = 680.0
+margin_bottom = 387.0
+
+[node name="Field4" parent="." instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 415.0
+margin_right = 680.0
+margin_bottom = 482.0
+
+[node name="Field5" parent="." instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 510.0
+margin_right = 680.0
+margin_bottom = 577.0
+
+[node name="Field6" parent="." instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 605.0
+margin_right = 680.0
+margin_bottom = 672.0
+
+[node name="Field7" parent="." instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 700.0
+margin_right = 680.0
+margin_bottom = 767.0
 [connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]
 [connection signal="button_down" from="Toggle" to="." method="_on_Toggle_button_down"]
 [connection signal="sort_confidence" from="Header" to="." method="sort_confidence"]

@@ -1,0 +1,20 @@
+Analyst Name,Prediction,Topic,Direction,Date,Benchmark 1 month,Benchmark 6 months,Benchmark 1 year,Prediction Source,Result Source
+Nalak Das,Caterpillar will increase,CAT,Up,Jun 11 2018,FALSE,FALSE,TRUE,this was somewhere on zack's but i can't find it,google finance
+Nalak Das,Deere will increase,DE,Up,Aug 12 2020,TRUE,TRUE,—,,
+Quinn Bolton,ACMR will increase,ACMR,Up,Mar 19 2020,TRUE,TRUE,FALSE,https://www.markets.co/acm-research-acmr-receives-a-buy-from-needham/243323/,yahoo finance
+Quinn Bolton,ACMR will decrease,ACMR,Down,Sep 8 2020,FALSE,FALSE,—,https://seekingalpha.com/news/3612164-acm-research-plunges-after-needham-downgrade-on-smic-blacklist-risk,yahoo finance
+Nalak Das,NPO will increase,NPO,Up,Sep 4 2020,TRUE,TRUE,—,,
+Harsh Chauhan,TWLO will increase,TWLO,Up,Dec 29 2017,TRUE,TRUE,TRUE,https://www.fool.com/investing/2017/12/29/why-twilio-is-ready-for-a-turnaround.aspx,google finance
+Harsh Chauhan,AMAT will increase,AMAT,Up,Oct 16 2019,TRUE,TRUE,TRUE,https://www.fool.com/investing/2019/10/15/2-cheap-dividend-stocks-you-can-buy-right-now.aspx,google finance
+Will Ashworth,BABA will increase,BABA,Up,May 6 2019,FALSE,FALSE,TRUE,https://investorplace.com/2019/05/3-things-baba-stock-must-do/,google finance
+Julian Lin,AMC will decrease,AMC,Down,Jan 28 2021,FALSE,—,—,https://seekingalpha.com/article/4401647-forget-gamestop-amc-is-generational-short-opportunity,google finance
+Julian Lin,BABA will stay constant,BABA,Neither,Jul 9 2018,FALSE,TRUE,FALSE,https://seekingalpha.com/article/4186182-alibaba-shareholders-should-sell-and-buy-altaba,google finance
+Joe Tenebruso,COST will increase,COST,Up,Apr 22 2020,FALSE,TRUE,TRUE,https://www.fool.com/investing/stock-market/types-of-stocks/blue-chip-stocks/best-blue-chip-dividend-stocks/,yahoo finance
+Joe Tenebruso,RDFN will increase,RDFN,Up,Feb 25 2020,FALSE,TRUE,TRUE,https://www.fool.com/investing/stock-market/types-of-stocks/mid-cap-stocks/,yahoo finance
+Lukas Wolgram,XPEL will increase,XPEL,Up,Nov 18 2019,FALSE,FALSE,TRUE,https://seekingalpha.com/article/4307353-despite-150-run-year-to-date-xpel-remains-strong-buy,yahoo finance
+Lukas Wolgram,VOOG will increase,VOOG,Up,Sep 30 2020,FALSE,TRUE,—,https://seekingalpha.com/article/4377038-vanguard-s-and-p-500-growth-etf-stability-growth-and-cash-flow,yahoo finance
+Rod Hall,AAPL will decrease,AAPL,Down,Apr 16 2020,FALSE,FALSE,FALSE,https://www.marketwatch.com/story/apples-recovery-from-covid-19-could-take-a-while-goldman-sachs-warns-2020-04-17,yahoo finance
+Rod Hall,ANET will stay constant or slightly increase,ANET,Neither,November 4 2016,TRUE,TRUE,FALSE,https://www.markets.co/arista-networks-receives-a-hold-from-j-p-morgan/37868/,yahoo finance
+Rod Hall,ANET will increase,ANET,Up,Feb 6 2018,FALSE,FALSE,FALSE,https://thefly.com/landingPageNews.php?id=2679947&headline=ANET-Arista-Networks-initiated-with-a-Conviction-Buy-at-Goldman-Sachs,yahoo finance
+Rod Hall,CISCO will decrease,CISCO,Down,Feb 12 2015,FALSE,FALSE,FALSE,https://finance.yahoo.com/news/ciscos-stock-soars-7-high-174135939.html,yahoo finance
+Trevor Jennewine,MA will increase,MA,Up,Dec 3 2020,TRUE,,,,yahoo finance
