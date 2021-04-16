@@ -126,7 +126,7 @@
 
 					window.setTimeout(function() {
 						$message._hide();
-					}, 3000);
+					}, 4000);
 
 				};
 
@@ -152,6 +152,18 @@
 					// but there's enough here to piece together a working AJAX submission call that does.
 						window.setTimeout(function() {
 
+                            // TODO: actually collect emails
+//                                 $.ajax({
+//                                 url: "process.php",
+//                                 type: "POST",
+//                                 data: document.getElementById("email").value,
+//                                 success: function(){
+//                                 alert("success");
+//                                 }
+//                                 }).done(function (data) {
+//                                     console.log(data);
+//                                 });
+                            
 							// Reset form.
 								$form.reset();
 
@@ -169,3 +181,6 @@
 		})();
 
 })();
+
+
+

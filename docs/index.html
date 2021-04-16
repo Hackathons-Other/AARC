@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -18,19 +19,20 @@
 				<h1>DeMythify</h1>
 				<p>Drown out financial myths.<br>
 				We'll help you find and analyze financial predictions, <br>
-				made by anyone - from big name experts, to your friends and family.</p>
+				made by anyone - from big name experts, to your friends and family. <br><br>
+					<a href="webapp/index.html"><span class="label">Demo (In Development)</span></a></p>
 			</header>
 
 		<!-- Signup Form -->
-			<form id="signup-form" method="post" >
+			<form id="signup-form" method="post" action="signup.php">
 <!--			action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeyD3ssWTz7Z00S4YToWvir2oLGxBTmFhBLjNK6uzh88miXFQ/formResponse"	target="hidden_iframe" onsubmit="return validateForm();" -->
 				<input type="email" name="email" id="email" placeholder="Email Address" > <!-- required name = "entry.747111174">-->
-				<input type="submit" value="Sign Up (doesn't actually work yet)" />
+				<input type="submit" name="submit" value="Sign Up (doesn't actually work yet)" />
 			</form>
 
+        
 		<!-- Footer -->
 			<footer id="footer">
-                <a href="webapp/index.html"><span class="label">Demo</span></a>
 				<!--<ul class="icons">
 					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
