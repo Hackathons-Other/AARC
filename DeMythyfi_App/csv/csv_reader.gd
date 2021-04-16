@@ -39,6 +39,11 @@ func get_rand_src() -> String:
 func get_src(row: Array) -> String:
 	return row[8]
 
+func get_stock(row: Array) -> String:
+	return row[2]
+
+func get_rand_stock() -> String:
+	return get_stock(get_rand_row())
 
 func _ready():
 	DATA = read_csv("res://csv/analysts_dataset.csv")

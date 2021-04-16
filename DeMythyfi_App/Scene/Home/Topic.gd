@@ -16,7 +16,7 @@ func _ready():
 #		if child is Topic:
 #			print(child.name)
 	randomize()
-	get_node("Toggle").text = names[randi() % names.size()]
+	get_node("Toggle").text = CSV.get_rand_stock()#names[randi() % names.size()]
 	get_node("Toggle").self_modulate = G.colors[randi() % G.colors.size()]
 	for child in get_children():
 		if child is Field:
@@ -70,3 +70,5 @@ func _on_Toggle_button_down():
 				child.show()
 			tween.interpolate_property(child, "modulate:a", child.modulate.a, int(round(child.modulate.a + 1)) % 2, fade_time)
 			tween.start()
+
+
