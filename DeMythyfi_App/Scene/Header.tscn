@@ -114,4 +114,5 @@ custom_colors/font_color = Color( 1.35, 0.9, 1.5, 1 )
 custom_colors/font_color_hover = Color( 2.03, 1.35, 2.25, 1 )
 text = "Up/Down"
 align = 2
+
 [connection signal="button_up" from="Label/Confidence" to="." method="_on_Confidence_button_up"]

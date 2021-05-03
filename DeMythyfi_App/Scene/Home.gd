@@ -6,7 +6,7 @@ func _ready() -> void:
 	if get_node_or_null("Anim"):
 		$Anim.play("Fade")
 	if get_node_or_null("Body/TabContainer/Stonks/Stonks"):
-		for child in $Body/TabContainer/Stonks/Stonks.get_children():
+		for child in $Body/TabContainer/Stocks/Stonks.get_children():
 			if child is Topic:
 				child._on_Toggle_button_down()
 

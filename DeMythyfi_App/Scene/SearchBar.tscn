@@ -78,4 +78,5 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = SubResource( 2 )
 custom_fonts/font = ExtResource( 2 )
 text = "Search!"
+
 [connection signal="button_up" from="Search" to="." method="_on_Search_button_up"]

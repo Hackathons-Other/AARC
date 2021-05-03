@@ -9,15 +9,110 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Control",
+"class": "Chart",
+"language": "GDScript",
+"path": "res://addons/easy_charts/Utilities/Scripts/chart.gd"
+}, {
+"base": "Node2D",
+"class": "Chart2D",
+"language": "GDScript",
+"path": "res://addons/easy_charts/Utilities/Scripts/chart2d.gd"
+}, {
+"base": "Chart",
+"class": "ColumnChart",
+"language": "GDScript",
+"path": "res://addons/easy_charts/ColumnChart/column_chart.gd"
+}, {
+"base": "Chart2D",
+"class": "ColumnChart2D",
+"language": "GDScript",
+"path": "res://addons/easy_charts/ColumnChart2D/column_chart2D.gd"
+}, {
+"base": "Reference",
+"class": "DataFrame",
+"language": "GDScript",
+"path": "res://addons/easy_charts/Utilities/Data/data_frame.gd"
+}, {
 "base": "HBoxContainer",
 "class": "Field",
 "language": "GDScript",
 "path": "res://Scene/Home/Field.gd"
 }, {
+"base": "VBoxContainer",
+"class": "LegendElement",
+"language": "GDScript",
+"path": "res://addons/easy_charts/Utilities/Legend/function_legend.gd"
+}, {
+"base": "ScatterChartBase",
+"class": "LineChart",
+"language": "GDScript",
+"path": "res://addons/easy_charts/LineChart/line_chart.gd"
+}, {
+"base": "Chart2D",
+"class": "LineChart2D",
+"language": "GDScript",
+"path": "res://addons/easy_charts/LineChart2D/line_chart2D.gd"
+}, {
+"base": "Reference",
+"class": "Matrix",
+"language": "GDScript",
+"path": "res://addons/easy_charts/Utilities/Data/matrix.gd"
+}, {
+"base": "Reference",
+"class": "MatrixGenerator",
+"language": "GDScript",
+"path": "res://addons/easy_charts/Utilities/Data/matrix_generator.gd"
+}, {
+"base": "Chart",
+"class": "PieChart",
+"language": "GDScript",
+"path": "res://addons/easy_charts/PieChart/pie_chart.gd"
+}, {
+"base": "Control",
+"class": "Point",
+"language": "GDScript",
+"path": "res://addons/easy_charts/Utilities/Point/point.gd"
+}, {
+"base": "PanelContainer",
+"class": "PointData",
+"language": "GDScript",
+"path": "res://addons/easy_charts/Utilities/Point/point_data.gd"
+}, {
+"base": "Chart",
+"class": "RadarChart",
+"language": "GDScript",
+"path": "res://addons/easy_charts/RadarChart/radar_chart.gd"
+}, {
+"base": "ScatterChartBase",
+"class": "ScatterChart",
+"language": "GDScript",
+"path": "res://addons/easy_charts/ScatterChart/scatter_chart.gd"
+}, {
+"base": "Chart2D",
+"class": "ScatterChart2D",
+"language": "GDScript",
+"path": "res://addons/easy_charts/ScatterChart2D/scatter_chart2D.gd"
+}, {
+"base": "Spatial",
+"class": "ScatterChart3D",
+"language": "GDScript",
+"path": "res://addons/easy_charts/ScatterChart3D/scatter_chart3D.gd"
+}, {
+"base": "Chart",
+"class": "ScatterChartBase",
+"language": "GDScript",
+"path": "res://addons/easy_charts/Utilities/Scripts/scatter_chart_base.gd"
+}, {
 "base": "HBoxContainer",
 "class": "SearchBar",
 "language": "GDScript",
 "path": "res://Scene/SearchBar.gd"
+}, {
+"base": "Reference",
+"class": "Slice",
+"language": "GDScript",
+"path": "res://addons/easy_charts/Utilities/Slice/slice.gd"
 }, {
 "base": "VBoxContainer",
 "class": "Topic",
@@ -30,8 +125,27 @@ _global_script_classes=[ {
 "path": "res://Scene/SocMed/Topic.gd"
 } ]
 _global_script_class_icons={
+"Chart": "",
+"Chart2D": "",
+"ColumnChart": "",
+"ColumnChart2D": "",
+"DataFrame": "",
 "Field": "",
+"LegendElement": "",
+"LineChart": "",
+"LineChart2D": "",
+"Matrix": "",
+"MatrixGenerator": "",
+"PieChart": "",
+"Point": "",
+"PointData": "",
+"RadarChart": "",
+"ScatterChart": "",
+"ScatterChart2D": "",
+"ScatterChart3D": "",
+"ScatterChartBase": "",
 "SearchBar": "",
+"Slice": "",
 "Topic": "",
 "TopicSocMed": ""
 }
@@ -47,6 +161,7 @@ config/icon="res://icon.png"
 
 G="*res://Global.gd"
 CSV="*res://csv/csv_reader.gd"
+Utilities="*res://addons/easy_charts/Utilities/Scripts/utilities.gd"
 
 [display]
 
@@ -54,6 +169,10 @@ window/size/width=720
 window/size/height=960
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/easy_charts/plugin.cfg" )
 
 [importer_defaults]
 

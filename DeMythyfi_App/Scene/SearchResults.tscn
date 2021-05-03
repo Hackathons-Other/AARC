@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Font/Typori_Paragraph.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Scene/SearchBar.tscn" type="PackedScene" id=2]
@@ -8,6 +8,10 @@
 [ext_resource path="res://Scene/GradientBackground.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scene/SearchResults.gd" type="Script" id=7]
 [ext_resource path="res://Scene/Home/Topic.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scene/BG_Blurred.gd" type="Script" id=9]
+[ext_resource path="res://Img/white.png" type="Texture" id=10]
+[ext_resource path="res://Temp/bg.png" type="Texture" id=11]
+[ext_resource path="res://Shader/BlurShader.tres" type="Material" id=12]
 
 [node name="SearchResults" type="MarginContainer"]
 anchor_right = 1.0
@@ -23,6 +27,24 @@ __meta__ = {
 
 [node name="gradient_background" parent="." instance=ExtResource( 6 )]
 position = Vector2( -50.8542, -42.3785 )
+
+[node name="bg" type="Sprite" parent="."]
+position = Vector2( 1035.67, 509.827 )
+scale = Vector2( 1.18507, 1.18507 )
+texture = ExtResource( 11 )
+
+[node name="Blur" type="TextureRect" parent="bg"]
+material = ExtResource( 12 )
+margin_left = -1306.0
+margin_top = -778.0
+margin_right = 2141.0
+margin_bottom = 2117.0
+texture = ExtResource( 10 )
+expand = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Home" type="MarginContainer" parent="."]
 margin_right = 680.0
@@ -46,29 +68,29 @@ __meta__ = {
 }
 
 [node name="SearchBar" parent="Home/Body" instance=ExtResource( 2 )]
-margin_bottom = 64.0
+margin_bottom = 55.0
 
 [node name="Margin" parent="Home/Body/SearchBar" index="0"]
-margin_right = 540.0
-margin_bottom = 64.0
+margin_right = 538.0
+margin_bottom = 55.0
 
 [node name="TextureRect" parent="Home/Body/SearchBar/Margin" index="0"]
-margin_right = 540.0
-margin_bottom = 64.0
+margin_right = 538.0
+margin_bottom = 55.0
 
 [node name="TextEdit" parent="Home/Body/SearchBar/Margin" index="1"]
-margin_right = 540.0
-margin_bottom = 58.0
+margin_right = 538.0
+margin_bottom = 55.0
 
 [node name="Search" parent="Home/Body/SearchBar" index="1"]
-margin_left = 544.0
-margin_right = 618.0
-margin_bottom = 64.0
+margin_left = 542.0
+margin_right = 615.0
+margin_bottom = 55.0
 
 [node name="Home" type="Button" parent="Home/Body/SearchBar"]
-margin_left = 622.0
+margin_left = 619.0
 margin_right = 680.0
-margin_bottom = 64.0
+margin_bottom = 55.0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 0
 custom_fonts/font = ExtResource( 1 )
@@ -76,7 +98,7 @@ custom_colors/font_color = Color( 0.027451, 0.231373, 0.298039, 1 )
 text = "Home"
 
 [node name="Stonks" type="ScrollContainer" parent="Home/Body"]
-margin_top = 80.0
+margin_top = 71.0
 margin_right = 680.0
 margin_bottom = 920.0
 size_flags_horizontal = 3
@@ -85,137 +107,138 @@ scroll_horizontal_enabled = false
 
 [node name="Topic" parent="Home/Body/Stonks" instance=ExtResource( 8 )]
 margin_top = 0.0
-margin_bottom = 2222.0
+margin_bottom = 2762.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Field3" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 318.0
+margin_top = 795.0
 margin_right = 680.0
-margin_bottom = 382.0
+margin_bottom = 862.0
 
 [node name="Field4" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 410.0
+margin_top = 890.0
 margin_right = 680.0
-margin_bottom = 474.0
+margin_bottom = 957.0
 
 [node name="Field5" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 502.0
+margin_top = 985.0
 margin_right = 680.0
-margin_bottom = 566.0
+margin_bottom = 1052.0
 
 [node name="Field6" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 594.0
+margin_top = 1080.0
 margin_right = 680.0
-margin_bottom = 658.0
+margin_bottom = 1147.0
 
 [node name="Field7" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 686.0
+margin_top = 1175.0
 margin_right = 680.0
-margin_bottom = 750.0
+margin_bottom = 1242.0
 
 [node name="Field8" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 778.0
+margin_top = 1270.0
 margin_right = 680.0
-margin_bottom = 842.0
+margin_bottom = 1337.0
 
 [node name="Field9" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 870.0
+margin_top = 1365.0
 margin_right = 680.0
-margin_bottom = 934.0
+margin_bottom = 1432.0
 
 [node name="Field10" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 962.0
+margin_top = 1460.0
 margin_right = 680.0
-margin_bottom = 1026.0
+margin_bottom = 1527.0
 
 [node name="Field11" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 1054.0
+margin_top = 1555.0
 margin_right = 680.0
-margin_bottom = 1118.0
+margin_bottom = 1622.0
 
 [node name="Field12" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 1146.0
+margin_top = 1650.0
 margin_right = 680.0
-margin_bottom = 1210.0
+margin_bottom = 1717.0
 
 [node name="Field13" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 1238.0
+margin_top = 1745.0
 margin_right = 680.0
-margin_bottom = 1302.0
+margin_bottom = 1812.0
 
 [node name="Field14" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 1330.0
+margin_top = 1840.0
 margin_right = 680.0
-margin_bottom = 1394.0
+margin_bottom = 1907.0
 
 [node name="Field15" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 1422.0
+margin_top = 1935.0
 margin_right = 680.0
-margin_bottom = 1486.0
+margin_bottom = 2002.0
 
 [node name="Field16" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 1514.0
+margin_top = 2030.0
 margin_right = 680.0
-margin_bottom = 1578.0
+margin_bottom = 2097.0
 
 [node name="Field17" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 1606.0
+margin_top = 2125.0
 margin_right = 680.0
-margin_bottom = 1670.0
+margin_bottom = 2192.0
 
 [node name="Field18" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 1698.0
+margin_top = 2220.0
 margin_right = 680.0
-margin_bottom = 1762.0
+margin_bottom = 2287.0
 
 [node name="Field19" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 1790.0
+margin_top = 2315.0
 margin_right = 680.0
-margin_bottom = 1854.0
+margin_bottom = 2382.0
 
 [node name="Field20" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 1882.0
+margin_top = 2410.0
 margin_right = 680.0
-margin_bottom = 1946.0
+margin_bottom = 2477.0
 
 [node name="Field21" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 1974.0
+margin_top = 2505.0
 margin_right = 680.0
-margin_bottom = 2038.0
+margin_bottom = 2572.0
 
 [node name="Field22" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 2066.0
+margin_top = 2600.0
 margin_right = 680.0
-margin_bottom = 2130.0
+margin_bottom = 2667.0
 
 [node name="Field23" parent="Home/Body/Stonks/Topic" instance=ExtResource( 3 )]
 margin_left = 0.0
-margin_top = 2158.0
+margin_top = 2695.0
 margin_right = 680.0
-margin_bottom = 2222.0
+margin_bottom = 2762.0
+
 [connection signal="button_up" from="Home/Body/SearchBar/Home" to="." method="_on_Home_button_up"]
 
 [editable path="Home/Body/SearchBar"]
-
 [editable path="Home/Body/Stonks/Topic"]
+[editable path="Home/Body/Stonks/Topic/Field"]
