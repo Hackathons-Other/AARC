@@ -52,7 +52,7 @@ func _on_Toggle_button_down():
 				child.show()
 			tween.interpolate_property(child, "modulate:a", child.modulate.a, int(round(child.modulate.a + 1)) % 2, fade_time)
 			tween.start()
-	print(name)
+#	print(name)
 
 
 func _on_Toggle_toggled(button_pressed):

@@ -72,4 +72,6 @@ func _on_Percent_gui_input(event: InputEvent):
 			explanation.show()
 		else:
 			explanation = load("res://Scene/Explanation/Explanation.tscn").instance()
+			explanation.original = self
+			explanation.analyst = Name.text
 			get_tree().get_root().add_child(explanation)

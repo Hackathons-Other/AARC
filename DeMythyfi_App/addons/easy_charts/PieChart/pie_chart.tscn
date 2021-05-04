@@ -57,9 +57,9 @@ __meta__ = {
 [node name="PointData" parent="." instance=ExtResource( 2 )]
 
 [node name="PointData" parent="PointData" index="0"]
-margin_left = 548.258
-margin_top = 5.74516
-margin_right = 548.158
-margin_bottom = 6.54644
+margin_left = 747.911
+margin_top = -145.509
+margin_right = 747.81
+margin_bottom = -144.707
 
 [editable path="PointData"]

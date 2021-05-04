@@ -49,27 +49,76 @@ __meta__ = {
 [node name="Analytics" type="VBoxContainer" parent="Scroll/Control"]
 margin_left = 38.0
 margin_top = 74.0
-margin_right = 172.0
-margin_bottom = 232.0
+margin_right = 411.0
+margin_bottom = 152.0
 theme = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="Scroll/Control/Analytics"]
-margin_right = 134.0
+[node name="Name" type="Label" parent="Scroll/Control/Analytics"]
+margin_right = 373.0
 margin_bottom = 37.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Scroll/Control/Analytics"]
+[node name="Confidence" type="HBoxContainer" parent="Scroll/Control/Analytics"]
 margin_top = 41.0
-margin_right = 134.0
-margin_bottom = 158.0
-text = "Confidence:
-Experience:
-Accuracy:"
+margin_right = 373.0
+margin_bottom = 78.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Scroll/Control/Analytics/Confidence"]
+margin_right = 184.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+text = "Confidence:"
+
+[node name="Value" type="Label" parent="Scroll/Control/Analytics/Confidence"]
+margin_left = 188.0
+margin_right = 373.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+text = "34%"
+
+[node name="Experience" type="HBoxContainer" parent="Scroll/Control/Analytics"]
+margin_top = 82.0
+margin_right = 373.0
+margin_bottom = 119.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Scroll/Control/Analytics/Experience"]
+margin_right = 184.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+text = "Experience:"
+
+[node name="Value" type="Label" parent="Scroll/Control/Analytics/Experience"]
+margin_left = 188.0
+margin_right = 373.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+text = "34%"
+
+[node name="Accuracy" type="HBoxContainer" parent="Scroll/Control/Analytics"]
+margin_top = 123.0
+margin_right = 373.0
+margin_bottom = 160.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Scroll/Control/Analytics/Accuracy"]
+margin_right = 184.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+text = "Accuracy:"
+
+[node name="Value" type="Label" parent="Scroll/Control/Analytics/Accuracy"]
+margin_left = 188.0
+margin_right = 373.0
+margin_bottom = 37.0
+size_flags_horizontal = 3
+text = "34%"
 
 [node name="PieChart" parent="Scroll/Control" instance=ExtResource( 11 )]
 anchor_left = 0.741667
@@ -85,6 +134,7 @@ delimiter = ","
 Chart_Style/function_colors = PoolColorArray(  )
 Chart_Style/font = ExtResource( 5 )
 Chart_Style/bold_font = ExtResource( 5 )
+Chart_Style/font_color = Color( 0.117647, 0.117647, 0.117647, 1 )
 
 [node name="Charts" type="VBoxContainer" parent="Scroll/Control"]
 margin_left = 3.0
@@ -96,7 +146,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Chart3" type="TextureRect" parent="Scroll/Control/Charts"]
+[node name="Chart" type="TextureRect" parent="Scroll/Control/Charts"]
 margin_right = 714.0
 margin_bottom = 396.0
 size_flags_horizontal = 3
@@ -108,14 +158,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Scroll/Control/Charts"]
+[node name="HBox" type="HBoxContainer" parent="Scroll/Control/Charts"]
 margin_top = 400.0
 margin_right = 714.0
 margin_bottom = 796.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Chart" type="TextureRect" parent="Scroll/Control/Charts/HBoxContainer"]
+[node name="Chart2" type="TextureRect" parent="Scroll/Control/Charts/HBox"]
 margin_right = 355.0
 margin_bottom = 396.0
 size_flags_horizontal = 3
@@ -127,7 +177,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Chart2" type="TextureRect" parent="Scroll/Control/Charts/HBoxContainer"]
+[node name="Chart3" type="TextureRect" parent="Scroll/Control/Charts/HBox"]
 margin_left = 359.0
 margin_right = 714.0
 margin_bottom = 396.0
@@ -152,27 +202,27 @@ margin_right = 720.0
 margin_bottom = 55.0
 
 [node name="Margin" parent="VBox/SearchBar" index="0"]
-margin_right = 556.0
+margin_right = 563.0
 margin_bottom = 55.0
 
 [node name="TextureRect" parent="VBox/SearchBar/Margin" index="0"]
-margin_right = 556.0
+margin_right = 563.0
 margin_bottom = 55.0
 
 [node name="TextEdit" parent="VBox/SearchBar/Margin" index="1"]
-margin_right = 556.0
+margin_right = 563.0
 margin_bottom = 55.0
 
 [node name="Search" parent="VBox/SearchBar" index="1"]
-margin_left = 560.0
-margin_right = 633.0
+margin_left = 567.0
+margin_right = 640.0
 margin_bottom = 55.0
 
 [node name="Home" type="Button" parent="VBox/SearchBar"]
-margin_left = 637.0
+margin_left = 644.0
 margin_right = 720.0
 margin_bottom = 55.0
-text = "Home"
+text = "Done"
 __meta__ = {
 "_edit_use_anchors_": false
 }

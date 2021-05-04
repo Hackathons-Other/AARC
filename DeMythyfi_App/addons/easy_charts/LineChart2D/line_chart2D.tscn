@@ -69,9 +69,9 @@ default_color = Color( 0.117647, 0.117647, 0.117647, 1 )
 [node name="PointData" parent="." instance=ExtResource( 2 )]
 
 [node name="PointData" parent="PointData" index="0"]
-margin_left = 290.201
-margin_top = 11.6912
-margin_right = 290.066
-margin_bottom = 12.4914
+margin_left = 18.9754
+margin_top = -52.9561
+margin_right = 18.8405
+margin_bottom = -52.1559
 
 [editable path="PointData"]
