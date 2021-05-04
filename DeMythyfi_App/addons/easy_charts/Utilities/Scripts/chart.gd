@@ -9,7 +9,7 @@ signal chart_plotted(chart) # emit when a chart is plotted (static) or updated (
 signal point_pressed(point)
 
 # Onready Vars ............................
-onready var PointDataNode = $PointData/PointData
+onready var PointDataNode : PointData = $PointData/PointData
 onready var Points = $Points
 onready var Legend = $Legend
 onready var ChartName : Label = $ChartName

@@ -46,6 +46,7 @@ func hide(hide_it := true) -> void:
 	$bg.visible = !hide_it
 
 func show() -> void:
+	$Scroll/Control/PieChart.plot()
 	hide(false)
 
 func _on_Home_pressed():

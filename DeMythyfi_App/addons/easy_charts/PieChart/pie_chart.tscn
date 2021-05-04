@@ -55,11 +55,23 @@ __meta__ = {
 }
 
 [node name="PointData" parent="." instance=ExtResource( 2 )]
+layer = 2
 
 [node name="PointData" parent="PointData" index="0"]
-margin_left = 747.911
-margin_top = -145.509
-margin_right = 747.81
-margin_bottom = -144.707
+margin_left = 983.084
+margin_top = -99.5141
+margin_right = 1004.07
+margin_bottom = -98.7118
+
+[node name="PointData" parent="PointData/PointData" index="0"]
+margin_bottom = 60.1223
+
+[node name="Function" parent="PointData/PointData/PointData" index="0"]
+margin_top = 12.0
+margin_bottom = 26.0
+
+[node name="Value" parent="PointData/PointData/PointData" index="1"]
+margin_top = 29.0
+margin_bottom = 43.0
 
 [editable path="PointData"]

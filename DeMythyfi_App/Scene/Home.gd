@@ -5,8 +5,9 @@ func _ready() -> void:
 	$Body/SearchBar/Margin/TextEdit.text = G.searched
 	if get_node_or_null("Anim"):
 		$Anim.play("Fade")
-	if get_node_or_null("Body/TabContainer/Stonks/Stonks"):
-		for child in $Body/TabContainer/Stocks/Stonks.get_children():
+	var stocks := get_node_or_null("Body/TabContainer/Stocks/Stonks")
+	if stocks:
+		for child in stocks.get_children():
 			if child is Topic:
 				child._on_Toggle_button_down()
 

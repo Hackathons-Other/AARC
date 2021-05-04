@@ -39,8 +39,8 @@ func update_datas(point : Control):
 	Data.set_text(point.point_value[0]+":")
 	Value.set_text(point.point_value[1])
 	Function.set_text(point.function)
-	update()
 	show()
+	update()
 
 func update_slice_datas(slice : Slice):
 	update_size()
@@ -60,8 +60,8 @@ func update_slice_datas(slice : Slice):
 	Data.set_text(slice.x_value+":")
 	Value.set_text(slice.y_value)
 	Function.set_text(slice.function)
-	update()
 	show()
+	update()
 
 func update_size():
 	OFFSET.x = get_size().x/2
