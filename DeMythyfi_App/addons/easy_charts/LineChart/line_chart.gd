@@ -32,11 +32,12 @@ func _draw():
 func draw_lines():
 	var _function = 0
 	for PointContainer in Points.get_children(): #Each function is stored in a different PointContainer
-		for function_point in range(1, PointContainer.get_children().size()):
-			draw_line(
-					point_positions[_function][function_point - 1],
-					point_positions[_function][function_point],
-					function_colors[_function],
-					2,
-					false)
-		_function += 1
+		if point_positions.size() > _function: 
+			for function_point in range(1, PointContainer.get_children().size()):
+				draw_line(
+						point_positions[_function][function_point - 1],
+						point_positions[_function][function_point],
+						function_colors[_function],
+						2,
+						false)
+			_function += 1

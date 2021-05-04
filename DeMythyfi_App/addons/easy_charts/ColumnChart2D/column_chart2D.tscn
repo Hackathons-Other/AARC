@@ -3,10 +3,6 @@
 [ext_resource path="res://addons/easy_charts/ColumnChart2D/column_chart2D.gd" type="Script" id=1]
 [ext_resource path="res://addons/easy_charts/Utilities/Point/point_data.tscn" type="PackedScene" id=2]
 
-
-
-
-
 [node name="BarChart2D" type="Node2D"]
 script = ExtResource( 1 )
 __meta__ = {
@@ -22,7 +18,10 @@ the specific categories being compared, and the other axis represents a measured
 Some bar graphs present bars clustered in groups of more than one, showing the 
 values of more than one measured variable."
 }
-function_colors = [ "#1e1e1e", "#1e1e1e", "#1e1e1e", "#1e1e1e" ]
+v_lines_color = Color( 0.792157, 0.792157, 0.792157, 1 )
+h_lines_color = Color( 0.792157, 0.792157, 0.792157, 1 )
+box_color = Color( 0.117647, 0.117647, 0.117647, 1 )
+font_color = Color( 0.117647, 0.117647, 0.117647, 1 )
 
 [node name="Grid" type="Node2D" parent="."]
 
@@ -57,10 +56,9 @@ default_color = Color( 0.117647, 0.117647, 0.117647, 1 )
 [node name="PointData" parent="." instance=ExtResource( 2 )]
 
 [node name="PointData" parent="PointData" index="0"]
-visible = false
-margin_left = 48.6217
-margin_top = -122.631
-margin_right = 48.4856
-margin_bottom = -121.831
+margin_left = 21.4398
+margin_top = 0.988335
+margin_right = 21.3036
+margin_bottom = 1.78851
 
 [editable path="PointData"]

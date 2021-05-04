@@ -9,7 +9,7 @@ signal chart_plotted(chart) # emit when a chart is plotted (static) or updated (
 signal point_pressed(point)
 
 # Onready Vars ............................
-onready var PointData = $PointData/PointData
+onready var PointDataNode = $PointData/PointData
 onready var Points = $Points
 onready var Legend = $Legend
 onready var ChartName : Label = $ChartName
@@ -98,15 +98,20 @@ var x_decim : float = 5.0					setget set_x_decim
 var y_decim : float = 1.0					setget set_y_decim
 
 var points_shape : Array = [PointShapes.Dot]	setget set_points_shape
-var function_colors = [Color("#1e1e1e")]		setget set_function_colors
-var outline_color : Color = Color("#1e1e1e")	setget set_outline_color
-var box_color : Color = Color("#1e1e1e")		setget set_box_color
-var v_lines_color : Color = Color("#cacaca")	setget set_v_lines_color
-var h_lines_color : Color = Color("#cacaca")	setget set_h_lines_color
-var grid_color : Color = Color("#1e1e1e")		setget set_grid_color
+var function_colors = PoolColorArray([
+	Color("ff3232"),
+	Color("f7ba2b"),
+	Color("28f7a5"),
+	Color("2bbaff")
+	])		setget set_function_colors
+var outline_color : Color = Color.white	setget set_outline_color
+var box_color : Color = Color.white		setget set_box_color
+var v_lines_color : Color = Color.white	setget set_v_lines_color
+var h_lines_color : Color = Color.white	setget set_h_lines_color
+var grid_color : Color = Color.white		setget set_grid_color
 var font : Font									setget set_font
 var bold_font : Font							setget set_bold_font
-var font_color : Color = Color("#1e1e1e")		setget set_font_color
+var font_color : Color = Color.white		setget set_font_color
 
 var use_template : bool = true		setget set_use_template
 var template : int = 0		setget set_template
@@ -313,7 +318,7 @@ func slice_data() -> Array:
 
 func plot():
 	load_font()
-	PointData.hide()
+	PointDataNode.hide()
 	
 	if source == "" or source == null:
 		Utilities._print_message("Can't plot a chart without a Source file. Please, choose it in editor, or use the custom function _plot().",1)
@@ -333,7 +338,7 @@ func plot():
 
 func plot_from_csv(csv_file : String, _delimiter : String = delimiter):
 	load_font()
-	PointData.hide()
+	PointDataNode.hide()
 	
 	if csv_file == "" or csv_file == null:
 		Utilities._print_message("Can't plot a chart without a Source file. Please, choose it in editor, or use the custom function _plot().",1)
@@ -354,7 +359,7 @@ func plot_from_array(array : Array) -> void:
 	clean_variables()
 	clear_points()
 	load_font()
-	PointData.hide()
+	PointDataNode.hide()
 	
 	if array.empty():
 		Utilities._print_message("Can't plot a chart with an empty Array.",1)
@@ -378,7 +383,7 @@ func plot_from_dataframe(dataframe : DataFrame) -> void:
 	clear_points()
 	load_font()
 	load_font()
-	PointData.hide()
+	PointDataNode.hide()
 	
 	data = dataframe.get_dataframe().duplicate(true)
 	
@@ -439,11 +444,12 @@ func load_font():
 		font = lbl.get_font("")
 		lbl.free()
 	if bold_font != null:
-		PointData.Data.set("custom_fonts/font",bold_font)
+		PointDataNode.Data.set("custom_fonts/font",bold_font)
 
 func calculate_colors():
 	if function_colors.size() < functions:
-		for function in range(functions - function_colors.size() + 1): function_colors.append(Color(randf(),randf(), randf()))
+		for function in range(functions - function_colors.size() + 1): 
+			function_colors.append(Color(randf(),randf(), randf()))
 
 func set_shapes():
 	if points_shape.empty() or points_shape.size() < functions:
@@ -699,12 +705,12 @@ func point_pressed(point : Point):
 	emit_signal("point_pressed",point)
 
 func show_data(point : Point):
-	PointData.update_datas(point)
-	PointData.show()
+	PointDataNode.update_datas(point)
+	PointDataNode.show()
 
 func hide_data():
-	PointData.hide()
+	PointDataNode.hide()
 
 func show_slice_data(slice : Slice):
-	PointData.update_slice_datas(slice)
-	PointData.show()
+	PointDataNode.update_slice_datas(slice)
+	PointDataNode.show()

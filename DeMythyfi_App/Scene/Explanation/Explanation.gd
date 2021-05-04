@@ -1,9 +1,15 @@
-extends Control
+extends CanvasLayer
 
-onready var chart : LineChart2D = $Chart2D
+onready var chart : LineChart2D = $Explanation/LineChart
 
 func _ready():
 	chart.plot()
+	$PieChart.plot()
+	
 
-func _on_Button_button_down():
+func hide() -> void:
+	$Explanation.hide()
+
+
+func _on_Home_pressed():
 	get_tree().change_scene("res://Scene/Home.tscn")

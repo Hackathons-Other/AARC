@@ -65,7 +65,11 @@ func _on_Quotes_gui_input(event):
 		elif event.pressed:
 			first_drag_pos = event.global_position
 
-
+var explanation: CanvasLayer
 func _on_Percent_gui_input(event: InputEvent):
 	if event.is_action_pressed("click"):
-		get_tree().change_scene("res://Scene/Explanation/Explanation.tscn")
+		if explanation:
+			explanation.show()
+		else:
+			explanation = load("res://Scene/Explanation/Explanation.tscn").instance()
+			get_tree().get_root().add_child(explanation)
